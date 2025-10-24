@@ -1,12 +1,2 @@
 # A03_BankingSystem - Strategy & Observer Patterns
-
-## How to run
-
-1. Ensure Python 3.x is installed.
-2. (Optional) Create a virtual environment:
-   - `python -m venv .venv`
-   - Activate with `source .venv/bin/activate` (mac/linux) or `.\.venv\Scripts\activate` (Windows PowerShell)
-3. In terminal, from the project root run:
-   - `python A03_main.py`
-
-Output will show simulated emails and a service charge summary.
+The Observer Pattern in this banking system enables automatic notifications to clients when important account events occur. The Client class implements the Observer interface, allowing it to receive updates from bank accounts that act as subjects. When a BankAccount experiences significant events like low balances (below $100) or large transactions (above $5000), it automatically notifies all attached client observers through the update() method. This creates a real-time notification system where clients receive email alerts with timestamps and specific account details, ensuring they stay informed about their account activity without having to manually check their balances.
